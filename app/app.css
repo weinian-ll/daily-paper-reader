@@ -3049,6 +3049,11 @@ article.markdown-section {
   display: none;
 }
 
+#arxiv-search-quick-run-side[hidden],
+#arxiv-conference-control-side[hidden] {
+  display: none;
+}
+
 #arxiv-search-panel-main {
   flex: 1 1 auto;
   min-width: 0;
