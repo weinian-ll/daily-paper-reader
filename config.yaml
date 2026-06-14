@@ -30,7 +30,6 @@ subscriptions:
       description: 检索心脏/心肌缺血再灌注损伤与铁死亡相关论文，关注机制、信号通路、药物干预和心肌保护作用。
       enabled: true
       paper_sources:
-        - arxiv
         - biorxiv
       keywords:
         - keyword: mitochondrial dysfunction
@@ -72,7 +71,7 @@ subscriptions:
           enabled: true
           source: manual
           note: ''
-      updated_at: '2026-06-14T14:08:55.587Z'
+      updated_at: '2026-06-14T14:25:22.462Z'
 source_backends:
   arxiv:
     papers_table: arxiv_papers
