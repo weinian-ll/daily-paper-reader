@@ -35,9 +35,9 @@ subscriptions:
       keywords:
         - keyword: mitochondrial dysfunction
           keyword_cn: 线粒体功能障碍
-          query: mitochondrial dysfunction
+          query: Mitochondrial dysfunction and ferroptosis in heart tissue
         - keyword: Nrf2 HO-1
-          keyword_cn: ''
+          keyword_cn: Nrf2/HO-1 抗氧化通路
           query: Nrf2 HO-1
         - keyword: GPX4 SLC7A11
           keyword_cn: 铁死亡核心通路
@@ -52,17 +52,27 @@ subscriptions:
           keyword_cn: 心肌缺血再灌注损伤
           query: myocardial ischemia reperfusion injury
       intent_queries:
+        - query: oxidative stress mitochondrial dysfunction ferroptosis in myocardial ischemia reperfusion injury
+          query_cn: 氧化应激和线粒体功能障碍介导心肌缺血再灌注铁死亡
+          enabled: true
+          source: generated
+          note: ''
+        - query: GPX4 SLC7A11 Nrf2 HO 1 pathway in cardiac ischemia reperfusion ferroptosis
+          query_cn: GPX4/SLC7A11/Nrf2/HO 1 通路与心脏缺血再灌注铁死亡
+          enabled: true
+          source: generated
+          note: ''
         - query: therapeutic inhibition of ferroptosis protects against myocardial ischemia reperfusion injury
           query_cn: 抑制铁死亡保护心肌缺血再灌注损伤
           enabled: true
           source: manual
           note: ''
         - query: mechanisms of ferroptosis mediated cardiac ischemia reperfusion injury
-          query_cn: ''
+          query_cn: 铁死亡介导心脏缺血再灌注损伤的机制
           enabled: true
           source: manual
           note: ''
-      updated_at: '2026-06-14T13:58:51.275Z'
+      updated_at: '2026-06-14T14:08:55.587Z'
 source_backends:
   arxiv:
     papers_table: arxiv_papers
