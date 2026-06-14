@@ -46,7 +46,7 @@ subscriptions:
           query: cardiac ischemia reperfusion
         - keyword: ferroptosis
           keyword_cn: 铁死亡
-          query: ferroptosis
+          query: ferroptosis mechanism in ischemia reperfusion injury
         - keyword: myocardial ischemia reperfusion injury
           keyword_cn: 心肌缺血再灌注损伤
           query: myocardial ischemia reperfusion injury
@@ -71,7 +71,7 @@ subscriptions:
           enabled: true
           source: manual
           note: ''
-      updated_at: '2026-06-14T14:25:22.462Z'
+      updated_at: '2026-06-14T14:26:12.411Z'
 source_backends:
   arxiv:
     papers_table: arxiv_papers
