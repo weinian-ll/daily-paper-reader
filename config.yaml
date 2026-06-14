@@ -25,3 +25,68 @@ subscriptions:
     stage: A
     diff_threshold_pct: 15
   keyword_recall_mode: or
+  intent_profiles:
+    - tag: cif
+      description: 检索心脏/心肌缺血再灌注损伤与铁死亡相关论文，关注机制、信号通路、药物干预和心肌保护作用。
+      enabled: true
+      paper_sources:
+        - arxiv
+        - biorxiv
+      keywords:
+        - keyword: mitochondrial dysfunction
+          keyword_cn: 线粒体功能障碍
+          query: mitochondrial dysfunction
+        - keyword: Nrf2 HO-1
+          keyword_cn: ''
+          query: Nrf2 HO-1
+        - keyword: GPX4 SLC7A11
+          keyword_cn: 铁死亡核心通路
+          query: GPX4 SLC7A11
+        - keyword: cardiac ischemia reperfusion
+          keyword_cn: 心脏缺血再灌注
+          query: cardiac ischemia reperfusion
+        - keyword: ferroptosis
+          keyword_cn: 铁死亡
+          query: ferroptosis
+        - keyword: myocardial ischemia reperfusion injury
+          keyword_cn: 心肌缺血再灌注损伤
+          query: myocardial ischemia reperfusion injury
+      intent_queries:
+        - query: therapeutic inhibition of ferroptosis protects against myocardial ischemia reperfusion injury
+          query_cn: 抑制铁死亡保护心肌缺血再灌注损伤
+          enabled: true
+          source: manual
+          note: ''
+        - query: mechanisms of ferroptosis mediated cardiac ischemia reperfusion injury
+          query_cn: ''
+          enabled: true
+          source: manual
+          note: ''
+      updated_at: '2026-06-14T13:58:51.275Z'
+source_backends:
+  arxiv:
+    papers_table: arxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_arxiv_papers
+    vector_rpc_exact: match_arxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_arxiv_papers_bm25
+    sync_table: arxiv_sync_status
+    sync_success_value: success
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
+  biorxiv:
+    papers_table: biorxiv_papers
+    use_vector_rpc: true
+    vector_rpc: match_biorxiv_papers_exact
+    vector_rpc_exact: match_biorxiv_papers_exact
+    use_bm25_rpc: true
+    bm25_rpc: match_biorxiv_papers_bm25
+    schema: public
+    kind: supabase
+    enabled: true
+    url: https://lyucdwgefyfbmaiopjbk.supabase.co
+    anon_key: sb_publishable_lX-oi64Uxyd7SIVv3_w2Uw_MTOojeKq
